@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infraestructura - Comfacauca</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Infraestructuras del Centro Recreativo</h1>
+        <!-- Botón para volver a Centros Recreativos -->
+        <button onclick="window.location.href='../pages/centros-recreativos.html'" class="back-button">
+            Volver a Centros Recreativos
+        </button>
+        <button class= "buttom-new-booking" onclick="GestionDeReservas()">Gestionar Reservas</button>
+    </header>
+
+    <section class="card-container">
+        <!-- Tarjetas de infraestructura -->
+        <div class="card">
+            <img src="../img/cancha-futbol.jpg" alt="Cancha de Fútbol">
+            <h2>Cancha de Fútbol</h2>
+            <p>Ubicación: CR Pisojé</p>
+            <button onclick="reservarInfraestructura('Cancha de Fútbol')">Reservar</button>
+        </div>
+
+        <div class="card">
+            <img src="../img/salon-eventos.jpg" alt="Salón de Eventos">
+            <h2>Salón de Eventos</h2>
+            <p>Ubicación: CR Guayacanes</p>
+            <button onclick="reservarInfraestructura('Salón de Eventos')">Reservar</button>
+        </div>
+
+        <div class="card">
+            <img src="../img/jacuzzi.jpg" alt="Jacuzzi">
+            <h2>Jacuzzi</h2>
+            <p>Ubicación: CR La Ceiba</p>
+            <button onclick="reservarInfraestructura('Jacuzzi')">Reservar</button>
+        </div>
+    </section>
+
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

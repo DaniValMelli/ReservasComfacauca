@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Reservas - Trabajador</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Reservas - Usuario Trabajador</h1>
+        <!-- Botón para volver a Centros Recreativos -->
+        <button onclick="window.location.href='../pages/centros-recreativos.html'" class="back-button">
+            Volver a Centros Recreativos
+        </button>
+        
+    </header>
+
+    <section class="filter-section">
+        <h2>Filtrar Reservas</h2>
+        <label for="tipoUsuario">Tipo de Usuario:</label>
+        <select id="tipoUsuario">
+            <option value="afiliado">Afiliado</option>
+            <option value="particular">Particular</option>
+        </select>
+
+        <label for="estadoReserva">Estado de la Reserva:</label>
+        <select id="estadoReserva">
+            <option value="cancelada">Todas</option>
+            <option value="creada">Creada</option>
+            <option value="efectiva">Efectiva</option>
+            <option value="cancelada">Cancelada</option>
+        </select>
+
+        <button onclick="filtrarReservas()">Filtrar</button>
+    </section>
+    <button class= "buttom-new-booking" onclick="crearNuevaReserva()">Crear Nueva Reserva</button>
+    <section class="reservas-list">
+        <h2>Lista de Reservas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Estado</th>
+                    <th>Infraestructura</th>
+                    <th>Fecha</th>
+                    <th>Usuario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="reservasBody">
+                <!-- Ejemplo de reserva -->
+                <tr>
+                    <td>Cancha de Fútbol</td>
+                    <td>12/10/2024</td>
+                    <td>Creada</td>
+                    <td>Maria López</td>
+                    <td>
+                        <button onclick="editarReserva()">Editar</button>
+                        <button onclick="cancelarReserva()">Cancelar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
